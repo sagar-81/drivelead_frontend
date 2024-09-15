@@ -15,11 +15,11 @@ const Cards = () => {
                         {/* Content */}
                         <div className="flex flex-col">
                             <div className="flex justify-between">
-                                <h4 className="font-bold text-gray-800 font-serif">Peter Dil</h4>
+                                <h4 className="font-bold text-gray-800 ">Peter Dil</h4>
                                 <span className="text-gray-400 text-xl">×</span>
                             </div>
                             <p className="text-gray-700 mt-1">
-                                Cheapest <span className="font-serif">alternative to Typeform?</span>
+                                Cheapest <span className="">alternative to Typeform?</span>
                             </p>
                         </div>
                     </div>
@@ -37,10 +37,10 @@ const Cards = () => {
                         {/* Content */}
                         <div className="flex flex-col">
                             <div className="flex justify-between">
-                                <h4 className="font-serif text-gray-800">Elias Stravik</h4>
+                                <h4 className=" text-gray-800">Elias Stravik</h4>
                                 <span className="text-gray-400 text-xl">×</span>
                             </div>
-                            <p className="text-gray-700 mt-1 font-serif">
+                            <p className="text-gray-700 mt-1 ">
                                 100% of the leads for my <span className="font-bold">$10K / mo</span> agency has come
                                 from <span className="font-bold">Twitter/X</span>.
                             </p>
@@ -60,21 +60,21 @@ const Cards = () => {
                             className="w-12 h-12 rounded-full"
                         />
                         <div className="flex flex-col">
-                            <div className="text-green-500 font-serif">● New Lead</div>
-                            <h4 className="font-serif text-gray-800">Peter Dil</h4>
-                            <p className="text-gray-500 font-serif">@petr_d · 1 minute ago</p>
+                            <div className="text-green-500 ">● New Lead</div>
+                            <h4 className=" text-gray-800">Peter Dil</h4>
+                            <p className="text-gray-500 ">@petr_d · 1 minute ago</p>
                         </div>
                     </div>
                     <div className="text-gray-700">
                         <p>
-                            <span className="font-serif">VP of Product</span> at <span className="font-semibold">CooperFi Inc.</span>
+                            <span className="">VP of Product</span> at <span className="font-semibold">CooperFi Inc.</span>
                         </p>
-                        <p className="font-serif">Email: peterdil@cooperfi.co</p>
-                        <p className="font-serif">Industry: Consumer Goods</p>
-                        <p className="font-serif">Location: San Francisco, CA</p>
-                        <p className="font-serif">Company Size: 500+</p>
+                        <p className="">Email: peterdil@cooperfi.co</p>
+                        <p className="">Industry: Consumer Goods</p>
+                        <p className="">Location: San Francisco, CA</p>
+                        <p className="">Company Size: 500+</p>
                     </div>
-                    <button className="bg-black text-white rounded-md py-2 px-4 w-full font-serif">
+                    <button className="bg-black text-white rounded-md py-2 px-4 w-full ">
                         Reply in thread →
                     </button>
                 </div>

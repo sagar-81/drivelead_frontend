@@ -43,7 +43,7 @@ const Faq = () => {
     return (
         <div className='min-h-screen'>
         <div className="max-w-2xl mx-auto p-10 bg-white rounded-lg lg:mt-10 lg:mb-10 shadow-lg " id="faq">
-            <h2 className="text-3xl font-serif text-center mb-6">FAQ</h2>
+            <h2 className="text-3xl  text-center mb-6">FAQ</h2>
             <div className="space-y-4">
                 {faqs.map((faq, index) => (
                     <div key={index} className="border-b">
@@ -51,7 +51,7 @@ const Faq = () => {
                             onClick={() => toggleFAQ(index)}
                             className="w-full flex justify-between items-center p-4 focus:outline-none"
                         >
-                            <span className="text-lg font-serif text-black">{faq.question}</span>
+                            <span className="text-lg  text-black">{faq.question}</span>
                             <span>
                                 {openIndex === index ? (
                                     <i className="fas fa-chevron-up"></i>
@@ -64,7 +64,7 @@ const Faq = () => {
                             className={`transition-all duration-300 ${openIndex === index ? 'max-h-screen' : 'max-h-0 overflow-hidden'
                                 }`}
                         >
-                            <p className="p-4 text-gray-700 font-serif">{faq.answer}</p>
+                            <p className="p-4 text-gray-700 ">{faq.answer}</p>
                         </div>
                     </div>
                 ))}

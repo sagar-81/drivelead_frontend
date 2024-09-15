@@ -4,7 +4,7 @@ const PlatformsSection = () => {
     return (
         <div className="text-center py-16 bg-gray-50 ">
             {/* Platforms Support */}
-            <h2 className="text-3xl md:text-4xl font-serif mb-10">Supports Multiple Platforms</h2>
+            <h2 className="text-3xl md:text-4xl  mb-10">Supports Multiple Platforms</h2>
             
             <div className="sm:text-center flex flex-col lg:flex-row  md:flex-row justify-center md:space-x-10 mb-16 space-y-5 md:space-y-0">
                 {/* Platform logos */}
@@ -26,8 +26,8 @@ const PlatformsSection = () => {
             </div>
 
             {/* Call-to-action section */}
-            <h3 className="text-2xl md:text-3xl font-serif mb-8">Get started with Lightscope today</h3>
-            <button className="bg-black text-white px-6 py-3 rounded-lg shadow-lg hover:bg-gray-800 transition-all duration-300 transform hover:scale-105 font-serif">
+            <h3 className="text-2xl md:text-3xl  mb-8">Get started with Lightscope today</h3>
+            <button className="bg-black text-white px-6 py-3 rounded-lg shadow-lg hover:bg-gray-800 transition-all duration-300 transform hover:scale-105 ">
                 <Link to="/signup" className="">
                     Get started today
                 </Link>

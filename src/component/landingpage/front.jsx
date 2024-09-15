@@ -31,7 +31,7 @@ const Front = () => {
                     variants={fadeIn('left', 0.4)}
                     initial="hidden"
                     whileInView={"show"} className="flex space-x-2 items-center mb-4 lg:mb-0">
-                    <h1 className="text-3xl font-serif text-gray-800">lightscope</h1>
+                    <h1 className="text-3xl  text-gray-800">lightscope</h1>
                     <span className="text-sm font-semibold text-gray-500 tracking-wide">BETA</span>
                 </motion.div>
                 {/* Menu Icon for Mobile */}
@@ -95,7 +95,7 @@ const Front = () => {
                     initial="hidden"
                     whileInView={"show"} className="inline-flex items-center bg-white border rounded-xl shadow-md p-2 px-4 mt-24">
                     {/* Pre-launch badge */}
-                    <span className="inline-flex items-center font-serif text-sm px-2 py-1 rounded-md mr-3 border border-gray-100">
+                    <span className="inline-flex items-center  text-sm px-2 py-1 rounded-md mr-3 border border-gray-100">
                         <span className="bg-customPurple100 w-2 h-2 rounded-full mr-1"></span>
                         Pre-launch offer
                     </span>
@@ -116,18 +116,18 @@ const Front = () => {
                 whileInView={"show"}
                 className="text-center my-8 mt-20">
                 {/* Main heading */}
-                <h1 className="text-4xl md:text-6xl font-serif text-gray-800">
+                <h1 className="text-4xl md:text-6xl  text-gray-800">
                     Find your customers <br /> in seconds with AI
                 </h1>
 
                 {/* Subheading */}
-                <p className="text-lg md:text-xl text-gray-600 mt-14 font-serif ">
+                <p className="text-lg md:text-xl text-gray-600 mt-14  ">
                     lightscope scrapes social media and finds leads
                     <span className="font-bold"> ready to buy your product or service</span>
                 </p>
 
                 {/* CTA Button */}
-                <button className="mt-6 bg-black text-white px-8 py-3 rounded-lg hover:bg-gray-900 font-serif transition-all duration-300 transform hover:scale-105">
+                <button className="mt-6 bg-black text-white px-8 py-3 rounded-lg hover:bg-gray-900  transition-all duration-300 transform hover:scale-105">
                     <Link2 to="/signup" className="">
                         Find my customers
                     </Link2>
@@ -153,7 +153,7 @@ const Front = () => {
                     <div className="text-black-500 text-xl pl-2">
                         <span> ★★★★★</span>
                     </div>
-                    <div className="text-gray-700 font-serif text-sm ">
+                    <div className="text-gray-700  text-sm ">
                         Trusted by 30+ founders
                     </div>
                 </div>
