@@ -1,12 +1,19 @@
 const PricingTable = () => {
     return (
-        <div className="bg-gray-50 py-16">
+        <div className="bg-gray-50 py-16 min-h-screen" id="pricing">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
+
+                <div className="bg-center p-5 text-center mb-10">
+                    <h1 className="font-serif" style={{ fontSize: '50px' }}>Simple, scalable pricing</h1>
+                    <h3 className="text-2xl">🎁 All plans are currently 30% off for the first 50 customers (20 left)</h3>
+                </div>
                 {/* Grid for the pricing table */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-16 ">
                     {/* Basic Plan */}
-                    <div className="bg-white shadow-lg rounded-lg p-8">
-                        <h3 className="text-lg font-serif text-gray-600">For individuals</h3>
+                    <div className="bg-white shadow-lg rounded-lg p-8 transition-all duration-300 transform hover:scale-105 font-serif">
+                        <h3 className="text-lg font-serif text-gray-600 transition-colors duration-300">
+                            For individuals
+                        </h3>
                         <h2 className="text-3xl font-serif text-black mt-4">Basic</h2>
                         <p className="text-sm text-gray-500 font-serif mt-2">Perfect for smaller projects</p>
                         <p className="text-4xl font-serif text-black mt-4">$39 <span className="text-xl">/ mo</span></p>
@@ -28,7 +35,7 @@ const PricingTable = () => {
                     </div>
 
                     {/* Launch Plan */}
-                    <div className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-700 shadow-lg rounded-lg p-8 text-white">
+                    <div className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-700 shadow-lg rounded-lg p-8 text-white transition-all duration-300 transform hover:scale-105 font-serif">
                         <div className="flex justify-between items-center">
                             <h3 className="text-lg font-serif">For startups/agencies</h3>
                             <span className="bg-customPurple px-3 py-1 rounded text-xs font-medium">Popular</span>
@@ -54,7 +61,7 @@ const PricingTable = () => {
                     </div>
 
                     {/* Scale Plan */}
-                    <div className="bg-white shadow-lg rounded-lg p-8">
+                    <div className="bg-white shadow-lg rounded-lg p-8 transition-all duration-300 transform hover:scale-105 font-serif">
                         <h3 className="text-lg font-serif text-gray-600">For enterprises</h3>
                         <h2 className="text-3xl font-serif text-black mt-4">Scale</h2>
                         <p className="text-sm text-gray-500 font-serif mt-2">For larger scale companies</p>

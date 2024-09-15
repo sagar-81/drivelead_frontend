@@ -9,10 +9,10 @@ import PricingTable from './pricingtable';
 
 
 const LandingPage = () => {
- 
+
   return (
-    <>
-    <Front/>
+    <div className="bg-gradient-to-b from-purple-100 to-white">
+      <Front />
       <Cards />
       <Ratio />
       <LeadAlertSection />
@@ -20,7 +20,7 @@ const LandingPage = () => {
       <Faq />
       <PlatformsSection />
       <Footer />
-    </>
+    </div >
 
 
 

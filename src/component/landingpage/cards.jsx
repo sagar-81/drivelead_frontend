@@ -1,6 +1,6 @@
 const Cards = () => {
     return (
-        <div className="flex flex-col lg:flex-row lg:space-x-8 items-center justify-center p-32 space-y-8 lg:space-y-0 bg-gradient-to-b from-purple-100 to-white mt-10 h-auto">
+        <div className="flex flex-col lg:flex-row lg:space-x-8 items-center justify-center lg:mt-32 space-y-8 lg:space-y-0  h-auto">
             {/* Left section */}
             <div className="space-y-6 lg:space-y-8">
                 {/* First Card */}

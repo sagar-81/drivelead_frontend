@@ -12,7 +12,7 @@ function SignUpForm() {
     // };
     return (
         <div className='w-full'>
-        <div className="h-screen flex justify-center items-center bg-gray-100 bg-gradient-to-bl from-purple-300 via-transparent to-pink-300 w-full">
+        <div className="h-screen flex justify-center items-center bg-gray-100 bg-gradient-to-b from-purple-100 to-white w-full">
             <div className="w-full max-w-md">
                 <div className="bg-white p-8 rounded shadow-md">
                     <form className="space-y-4">

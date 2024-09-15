@@ -2,7 +2,7 @@ import { Link, } from 'react-router-dom';
 
 function LoginForm() {
     return (
-        <div className="h-screen flex justify-center items-center bg-gray-100 bg-gradient-to-bl from-purple-300 via-transparent to-pink-300">
+        <div className="h-screen flex justify-center items-center bg-gray-100 bg-gradient-to-b from-purple-100 to-white">
             <div className="w-full max-w-md">
                 <div className="bg-white p-8 rounded shadow-md">
                     <form className="space-y-4">
