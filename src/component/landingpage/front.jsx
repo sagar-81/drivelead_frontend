@@ -1,6 +1,7 @@
-import { Link } from 'react-router-dom'
+import { Link } from 'react-scroll';
+import { Link as Link2 } from 'react-router-dom'
 import { useState } from 'react';
-// import { Link } from 'react-router-dom';
+
 const Front = () => {
     const [isOpen, setIsOpen] = useState(false);
 
@@ -18,12 +19,13 @@ const Front = () => {
         'https://randomuser.me/api/portraits/men/29.jpg',
         'https://randomuser.me/api/portraits/men/28.jpg'
     ];
+
     return (
-        <div className="flex flex-col items-center justify-center">
+        <div className="flex flex-col items-center justify-center p-14">
             {/* NavBar */}
-            <div className="container mx-auto flex justify-between">
+            <div className="container flex flex-col lg:flex-row lg:justify-between items-center px-6 py-4 w-full">
                 {/* Logo */}
-                <div className="flex items-center space-x-2">
+                <div className="flex space-x-2 items-center mb-4 lg:mb-0">
                     <h1 className="text-3xl font-serif text-gray-800">lightscope</h1>
                     <span className="text-sm font-semibold text-gray-500 tracking-wide">BETA</span>
                 </div>
@@ -51,20 +53,24 @@ const Front = () => {
                             >
                                 How it works
                             </a>
-                            <a
-                                href="./"
+                            <Link
+                                to="pricing"
+                                smooth={true}
+                                duration={500}
                                 onClick={handleMenuItemClick}
-                                className="block px-4 py-2 text-black font-bold hover:bg-gray-100"
+                                className="block px-4 py-2 text-black font-bold hover:bg-gray-100 cursor-pointer"
                             >
                                 Pricing
-                            </a>
-                            <a
-                                href="./"
+                            </Link>
+                            <Link
+                                to="faq"
+                                smooth={true}
+                                duration={500}
                                 onClick={handleMenuItemClick}
-                                className="block px-4 py-2  text-black font-bold hover:bg-gray-100"
+                                className="block px-4 py-2 text-black font-bold hover:bg-gray-100 cursor-pointer"
                             >
                                 FAQ
-                            </a>
+                            </Link>
                         </div>
                     )}
                 </div>
@@ -73,23 +79,24 @@ const Front = () => {
 
 
             {/* Pre-launch offer banner */}
-            <div className="inline-flex items-center bg-white border rounded-xl shadow-md p-2 px-4 mt-24">
-                {/* Pre-launch badge */}
-                <span className="inline-flex items-center font-serif text-sm px-2 py-1 rounded-md mr-3 border border-gray-100">
-                    <span className="bg-customPurple100 w-2 h-2 rounded-full mr-1"></span>
-                    Pre-launch offer
-                </span>
+            <Link to="pricing"
+                smooth={true}
+                duration={500}>
+                <div className="inline-flex items-center bg-white border rounded-xl shadow-md p-2 px-4 mt-24">
+                    {/* Pre-launch badge */}
+                    <span className="inline-flex items-center font-serif text-sm px-2 py-1 rounded-md mr-3 border border-gray-100">
+                        <span className="bg-customPurple100 w-2 h-2 rounded-full mr-1"></span>
+                        Pre-launch offer
+                    </span>
 
-                {/* Text */}
-                <span className="text-gray-700 text-sm font-medium">
-                    Limited time 30% discount for the first 50 users
-                </span>
+                    {/* Text */}
+                    <span className="text-gray-700 text-sm font-medium pr-2">
+                        Limited time 30% discount for the first 50 users
+                    </span>
 
-                {/* Arrow Icon */}
-                <span className="ml-2 text-gray-500">
-                    &rarr;
-                </span>
-            </div>
+                    <i className="fas fa-angle-right text-sm text-gray-700"></i>
+                </div>
+            </Link>
 
             {/* Main content */}
             <div className="text-center my-8 mt-20">
@@ -105,10 +112,10 @@ const Front = () => {
                 </p>
 
                 {/* CTA Button */}
-                <button className="mt-6 bg-black text-white px-8 py-3 rounded-lg hover:bg-gray-900 transition-all font-serif">
-                    <Link to="/signup" className="">
+                <button className="mt-6 bg-black text-white px-8 py-3 rounded-lg hover:bg-gray-900 font-serif transition-all duration-300 transform hover:scale-105">
+                    <Link2 to="/signup" className="">
                         Find my customers
-                    </Link>
+                    </Link2>
                 </button>
             </div>
 

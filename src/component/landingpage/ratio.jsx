@@ -1,6 +1,6 @@
 const Ratio = () => {
     return (
-        <div className="bg-gray-100 flex items-center justify-center min-h-screen">
+        <div className="flex items-center justify-center mt-10 p-20">
             <div className="text-center space-y-8 px-4">
                 {/* Stats Section */}
                 <div className="flex flex-col md:flex-row justify-center space-y-8 md:space-y-0 md:space-x-12">
@@ -25,7 +25,7 @@ const Ratio = () => {
 
                 {/* CTA Section */}
                 <div className="text-center">
-                    <h3 className="text-3xl md:text-4xl font-serif mb-4">
+                    <h3 className="md:text-4xl font-serif mb-4 font-bold" style={{fontSize:'50px'}}>
                         Tired of scrolling for hours to find leads?
                     </h3>
                     <p className="text-lg font-serif">
