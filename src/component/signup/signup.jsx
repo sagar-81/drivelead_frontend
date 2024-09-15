@@ -1,5 +1,5 @@
 
-import { BrowserRouter as Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 //import { useState } from 'react';
 
 
@@ -11,7 +11,8 @@ function SignUpForm() {
     //     setShowPassword(!showPassword);
     // };
     return (
-        <div className="h-screen flex justify-center items-center bg-gray-100 bg-gradient-to-bl from-purple-300 via-transparent to-pink-300">
+        <div className='w-full'>
+        <div className="h-screen flex justify-center items-center bg-gray-100 bg-gradient-to-bl from-purple-300 via-transparent to-pink-300 w-full">
             <div className="w-full max-w-md">
                 <div className="bg-white p-8 rounded shadow-md">
                     <form className="space-y-4">
@@ -57,6 +58,7 @@ function SignUpForm() {
                     </form>
                 </div>
             </div>
+        </div>
         </div>
     );
 }
