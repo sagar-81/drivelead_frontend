@@ -6,22 +6,22 @@ const PlatformsSection = () => {
             {/* Platforms Support */}
             <h2 className="text-3xl md:text-4xl font-serif mb-10">Supports Multiple Platforms</h2>
             
-            <div className="flex flex-col lg:flex-row  md:flex-row justify-center md:space-x-10 mb-16 space-y-5 md:space-y-0">
+            <div className="sm:text-center flex flex-col lg:flex-row  md:flex-row justify-center md:space-x-10 mb-16 space-y-5 md:space-y-0">
                 {/* Platform logos */}
                 <img
                     src="https://framerusercontent.com/images/BMNiurnPonzQdbafNviAfy8iy0.svg"
                     alt="X"
-                    className="h-10 md:w-32 w-24 object-contain transform transition-transform duration-300 hover:scale-125"
+                    className="h-10 md:w-32 w-24 object-contain transform transition-transform duration-300 hover:scale-150"
                 />
                 <img
                     src="https://framerusercontent.com/images/oHZPmxIW4Dq0q7tIvDQZb9grvyQ.png?scale-down-to=512"
                     alt="LinkedIn"
-                    className="h-10 md:w-32 w-24 object-contain transform transition-transform duration-300 hover:scale-125"
+                    className="h-10 md:w-32 w-24 object-contain transform transition-transform duration-300 hover:scale-150"
                 />
                 <img
                     src="https://framerusercontent.com/images/8lH6QI6Y8QFM8mNBUCgjrbUIMU.png?scale-down-to=512"
                     alt="Reddit"
-                    className="h-10 md:w-32 w-24 object-contain transform transition-transform duration-300 hover:scale-125"
+                    className="h-10 md:w-32 w-24 object-contain transform transition-transform duration-300 hover:scale-150"
                 />
             </div>
 
