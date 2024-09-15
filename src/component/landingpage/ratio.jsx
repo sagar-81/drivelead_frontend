@@ -9,6 +9,7 @@ const Ratio = () => {
                         <h2 className="text-6xl font-medium text-customGray">400%</h2>
                         <p className="mt-2 text-lg font-serif">Better conversion than Cold DM</p>
                     </div>
+                    <div className="hidden lg:block lg:border-l lg:border-black lg:h-full md:block md:border-l md:border-gray-400 md:h-full md:w-1"></div>
 
                     {/* Hours Saved Stat */}
                     <div className="">
@@ -25,7 +26,7 @@ const Ratio = () => {
 
                 {/* CTA Section */}
                 <div className="text-center">
-                    <h3 className="md:text-4xl font-serif mb-4 font-bold" style={{fontSize:'50px'}}>
+                    <h3 className="md:text-4xl font-serif mb-4 font-bold" style={{ fontSize: '50px' }}>
                         Tired of scrolling for hours to find leads?
                     </h3>
                     <p className="text-lg font-serif">

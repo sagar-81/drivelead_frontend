@@ -6,7 +6,8 @@ import LeadAlertSection from './leadalert';
 import Faq from './faq';
 import PlatformsSection from './platformsection'
 import PricingTable from './pricingtable';
-
+import FindLead from './findlead'
+import Dm from './dm'
 
 const LandingPage = () => {
 
@@ -16,6 +17,8 @@ const LandingPage = () => {
       <Cards />
       <Ratio />
       <LeadAlertSection />
+      <FindLead/>
+      <Dm/>
       <PricingTable />
       <Faq />
       <PlatformsSection />

@@ -1,6 +1,8 @@
 import { Link } from 'react-scroll';
 import { Link as Link2 } from 'react-router-dom'
 import { useState } from 'react';
+import { motion } from 'framer-motion'
+import { fadeIn } from '../../variants'
 
 const Front = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -25,12 +27,18 @@ const Front = () => {
             {/* NavBar */}
             <div className="container flex flex-col lg:flex-row lg:justify-between items-center px-6 py-4 w-full">
                 {/* Logo */}
-                <div className="flex space-x-2 items-center mb-4 lg:mb-0">
+                <motion.div
+                    variants={fadeIn('left', 0.4)}
+                    initial="hidden"
+                    whileInView={"show"} className="flex space-x-2 items-center mb-4 lg:mb-0">
                     <h1 className="text-3xl font-serif text-gray-800">lightscope</h1>
                     <span className="text-sm font-semibold text-gray-500 tracking-wide">BETA</span>
-                </div>
+                </motion.div>
                 {/* Menu Icon for Mobile */}
-                <div className="relative">
+                <motion.div
+                    variants={fadeIn('right', 0.4)}
+                    initial="hidden"
+                    whileInView={"show"} className="relative">
                     <button onClick={toggleMenu} className="text-gray-600 focus:outline-none">
                         Menu
                         <span className="ml-2">&#9776;</span>
@@ -73,7 +81,7 @@ const Front = () => {
                             </Link>
                         </div>
                     )}
-                </div>
+                </motion.div>
             </div>
 
 
@@ -82,7 +90,10 @@ const Front = () => {
             <Link to="pricing"
                 smooth={true}
                 duration={500}>
-                <div className="inline-flex items-center bg-white border rounded-xl shadow-md p-2 px-4 mt-24">
+                <motion.div
+                    variants={fadeIn('down', 0.1)}
+                    initial="hidden"
+                    whileInView={"show"} className="inline-flex items-center bg-white border rounded-xl shadow-md p-2 px-4 mt-24">
                     {/* Pre-launch badge */}
                     <span className="inline-flex items-center font-serif text-sm px-2 py-1 rounded-md mr-3 border border-gray-100">
                         <span className="bg-customPurple100 w-2 h-2 rounded-full mr-1"></span>
@@ -95,11 +106,15 @@ const Front = () => {
                     </span>
 
                     <i className="fas fa-angle-right text-sm text-gray-700"></i>
-                </div>
+                </motion.div>
             </Link>
 
             {/* Main content */}
-            <div className="text-center my-8 mt-20">
+            <motion.div
+                variants={fadeIn('up', 0.4)}
+                initial="hidden"
+                whileInView={"show"}
+                className="text-center my-8 mt-20">
                 {/* Main heading */}
                 <h1 className="text-4xl md:text-6xl font-serif text-gray-800">
                     Find your customers <br /> in seconds with AI
@@ -117,7 +132,7 @@ const Front = () => {
                         Find my customers
                     </Link2>
                 </button>
-            </div>
+            </motion.div>
 
             {/* Trusted section */}
             <div className="flex items-center space-x-4 mt-5">
@@ -128,7 +143,7 @@ const Front = () => {
                             key={index}
                             src={avatar}
                             alt="Avatar"
-                            className={`w-10 h-10 rounded-full border-2 border-white ${index !== 0 ? '-ml-3' : ''}`}
+                            className={`w-10 h-10 rounded-full border-2 border-black ${index !== 0 ? '-ml-3' : ''}`}
                         />
                     ))}
                 </div>
