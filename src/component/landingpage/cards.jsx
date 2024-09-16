@@ -38,7 +38,7 @@ const Cards = () => {
         variants={fadeInUp}
         initial="hidden"
         animate={firstCardInView ? "show" : "hidden"}
-        transition={{ duration: 6 }} // 5 seconds transition for the first card
+        transition={{ duration: 7 }} // 5 seconds transition for the first card
         className="h-auto max-w-xs p-6 bg-white rounded-lg shadow-lg lg:max-w-md lg:w-auto"
       >
         <div className="flex items-start space-x-4">
