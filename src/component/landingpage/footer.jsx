@@ -9,13 +9,13 @@ const Footer = () => {
                 <div className="space-y-3 flex flex-col justify-around">
                     <div>
                         <h2 className="text-4xl font-bold text-black">lightscope</h2>
-                        <p className="text-1xl text-gray-600 font-serif">Find your customers in seconds</p>
+                        <p className="text-1xl text-gray-600 ">Find your customers in seconds</p>
                     </div>
                     <div>
-                        <p className="text-sm text-gray-500 font-serif">
+                        <p className="text-sm text-gray-500 ">
                             Copyright © 2024 Aureli LLC.
                         </p>
-                        <p className="text-sm text-gray-500 font-serif">
+                        <p className="text-sm text-gray-500 ">
                             All Rights Reserved.
                         </p>
                     </div>

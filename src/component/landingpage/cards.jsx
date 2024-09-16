@@ -77,45 +77,44 @@ const Cards = () => {
 
       {/* Right Card (New Lead) */}
       <motion.div
-  ref={thirdCardRef}
-  variants={fadeInUp}
-  initial="hidden"
-  animate={thirdCardInView ? "show" : "hidden"}
-  transition={{ duration: 0.5, delay: 0.4 }} // Slight delay for right card
-  className="max-w-xs p-6 bg-white rounded-lg shadow-lg lg:max-w-md lg:mt-0"
->
-  <div className="flex flex-col space-y-4">
-    {/* Lead Info */}
-    <div className="flex items-start space-x-4">
-      <img
-        src="https://randomuser.me/api/portraits/men/32.jpg"
-        alt="Peter Dil"
-        className="w-12 h-12 rounded-full"
-      />
-      <div className="flex flex-col">
-        <div className="flex items-center space-x-1">
-          <span className="text-xl text-green-500">●</span>
-          <span className="font-serif text-black">New Lead</span>
+        ref={thirdCardRef}
+        variants={fadeInUp}
+        initial="hidden"
+        animate={thirdCardInView ? "show" : "hidden"}
+        transition={{ duration: 0.5, delay: 0.4 }} // Slight delay for right card
+        className="max-w-xs p-6 bg-white rounded-lg shadow-lg lg:max-w-md lg:mt-0"
+      >
+        <div className="flex flex-col space-y-4">
+          {/* Lead Info */}
+          <div className="flex items-start space-x-4">
+            <img
+              src="https://randomuser.me/api/portraits/men/32.jpg"
+              alt="Peter Dil"
+              className="w-12 h-12 rounded-full"
+            />
+            <div className="flex flex-col">
+              <div className="flex items-center space-x-1">
+                <span className="text-xl text-green-500">●</span>
+                <span className="font-serif text-black">New Lead</span>
+              </div>
+              <h4 className="font-serif text-gray-800">Peter Dil</h4>
+              <p className="font-serif text-gray-500">@petr_d · 1 minute ago</p>
+            </div>
+          </div>
+          <div className="text-gray-700">
+            <p>
+              <span className="font-serif">VP of Product</span> at <span className="font-semibold">CooperFi Inc.</span>
+            </p>
+            <p className="font-serif">Email: peterdil@cooperfi.co</p>
+            <p className="font-serif">Industry: Consumer Goods</p>
+            <p className="font-serif">Location: San Francisco, CA</p>
+            <p className="font-serif">Company Size: 500+</p>
+          </div>
+          <button className="w-full px-4 py-2 font-serif text-white bg-black rounded-md">
+            Reply in thread →
+          </button>
         </div>
-        <h4 className="font-serif text-gray-800">Peter Dil</h4>
-        <p className="font-serif text-gray-500">@petr_d · 1 minute ago</p>
-      </div>
-    </div>
-    <div className="text-gray-700">
-      <p>
-        <span className="font-serif">VP of Product</span> at <span className="font-semibold">CooperFi Inc.</span>
-      </p>
-      <p className="font-serif">Email: peterdil@cooperfi.co</p>
-      <p className="font-serif">Industry: Consumer Goods</p>
-      <p className="font-serif">Location: San Francisco, CA</p>
-      <p className="font-serif">Company Size: 500+</p>
-    </div>
-    <button className="w-full px-4 py-2 font-serif text-white bg-black rounded-md">
-      Reply in thread →
-    </button>
-  </div>
-</motion.div>
-
+      </motion.div>
 
       {/* Bottom Card (Elias Stravik) */}
       <motion.div

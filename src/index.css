@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 body {
-    font-family: 'Serif', Georgia, "Times New Roman", serif;
+    font-family: 'Inter', sans-serif;
 }
