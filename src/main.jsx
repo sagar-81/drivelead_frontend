@@ -1,10 +1,12 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
+import React from 'react';
+import ReactDOM from 'react-dom/client'; // Updated import for React 18
+import App from './App';
+import './index.css'; // Ensure this file is imported
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
+// Create a root and render the app
+const root = ReactDOM.createRoot(document.getElementById('root')); // Use createRoot
+root.render(
+  <React.StrictMode>
     <App />
-  </StrictMode>,
-)
+  </React.StrictMode>
+);
