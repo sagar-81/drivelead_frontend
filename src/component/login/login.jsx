@@ -1,10 +1,16 @@
-import { Link, } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
+
 
 function LoginForm() {
+    const navigate = useNavigate();
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        navigate('/Dashboard');
+    };
     return (
         <div className="h-screen flex justify-center items-center bg-gray-100 bg-gradient-to-b from-purple-100 to-white">
             <div className="w-full max-w-md">
-                <div className="bg-white p-8 rounded shadow-md">
+                <div className="bg-white dark:bg-black p-8 rounded shadow-md">
                     <form className="space-y-4">
                         <h2 className="text-2xl font-bold text-center">Login</h2>
                         <div>
@@ -15,7 +21,7 @@ function LoginForm() {
                             <label className="block text-sm font-medium mb-2" >Password</label>
                             <input type="password" className="w-full p-2 border border-gray-300 rounded" placeholder="Enter your password" required />
                         </div>
-                        <button type="submit" className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600">Log in</button>
+                        <button type="submit" onClick={handleSubmit} className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600">Log in</button>
                         <div className="mt-4 text-center">
                             <p>
                                 Don&apos;t have an account?{' '}
