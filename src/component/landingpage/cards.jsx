@@ -102,7 +102,7 @@ const Cards = () => {
                 <span className="font-serif text-black">New Lead</span>
               </div>
               <h4 className="font-serif text-gray-800">Tushar Dushing</h4>
-              <p className="font-serif text-gray-500">@tushuDushing004· 1 minute ago</p>
+              <p className="font-serif text-gray-500">@tushuDushing004·    1 minute ago</p>
             </div>
           </div>
           <div className="text-gray-700">

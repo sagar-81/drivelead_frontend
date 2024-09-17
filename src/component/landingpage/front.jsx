@@ -25,7 +25,7 @@ const Front = () => {
     return (
         <div className="flex flex-col items-center justify-center font-sans">
             {/* Header - Removed all padding */}
-            <div className="container flex items-center justify-between w-full px-0 py-4 lg:flex-row">
+            <div className="container flex items-center justify-between w-full px-0 py-5 lg:flex-row">
                 {/* Logo */}
                 <motion.div
                     variants={fadeIn('left', 0.4)}
@@ -51,7 +51,7 @@ const Front = () => {
 
                     {/* Dropdown Menu */}
                     {isOpen && (
-                        <div className="absolute right-0 w-48 py-2 mt-2 bg-white dark:bg-black rounded-lg shadow-xl">
+                        <div className="absolute right-0 w-48 py-2 mt-2 bg-white rounded-lg shadow-xl dark:bg-black">
                             <a
                                 href="./"
                                 onClick={handleMenuItemClick}
@@ -95,7 +95,7 @@ const Front = () => {
                     variants={fadeIn('down', 0.1)}
                     initial="hidden"
                     whileInView="show"
-                    className="inline-flex items-center p-2 px-4 mt-12 bg-white dark:bg-black border shadow-md rounded-xl"
+                    className="inline-flex items-center p-2 px-4 mt-12 bg-white border shadow-md dark:bg-black rounded-xl"
                 >
                     {/* Pre-launch badge */}
                     <span className="inline-flex items-center px-2 py-1 mr-3 text-sm font-medium border border-gray-100 rounded-md">
