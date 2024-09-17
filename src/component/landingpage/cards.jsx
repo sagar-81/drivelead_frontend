@@ -3,15 +3,14 @@ import { useInView } from 'react-intersection-observer';
 import { useState, useEffect } from 'react';
 import { fadeInUp } from '../fade/variants';
 
-// Variants for fade-in and fade-out animations
 const fadeVariants = {
   hidden: { opacity: 0 },
-  show: { opacity: 1, transition: { duration: 5 } }, // 5 seconds fade-in duration
-  fadeOut: { opacity: 0, transition: { duration: 1 } }
+  show: { opacity: 1, transition: { duration: 7 } },
+  fadeOut: { opacity: 0, transition: { duration: 2 } }
 };
 
 const Cards = () => {
-  const [animationState, setAnimationState] = useState('hidden'); // Start with 'hidden'
+  const [animationState, setAnimationState] = useState('hidden');
 
   const { ref: firstCardRef, inView: firstCardInView } = useInView({ triggerOnce: true });
   const { ref: secondCardRef, inView: secondCardInView } = useInView({ triggerOnce: true });
@@ -19,15 +18,14 @@ const Cards = () => {
 
   useEffect(() => {
     if (firstCardInView || secondCardInView || thirdCardInView) {
-      // Set to 'show' when any card is in view
       setAnimationState('show');
     }
   }, [firstCardInView, secondCardInView, thirdCardInView]);
 
   return (
     <motion.div
-      className="relative flex flex-col items-center justify-center h-auto p-10 space-y-8 lg:flex-row lg:space-x-8 lg:mt-32 lg:space-y-0 bg-gradient-to-br from-purple-50 to-purple-100"
-      initial="hidden" // Set initial state to 'hidden'
+      className="relative flex flex-col items-center justify-center h-auto p-10 space-y-8 lg:flex-row lg:space-x-8 lg:mt-32 lg:space-y-0 animated-gradient-bg"
+      initial="hidden"
       animate={animationState}
       variants={fadeVariants}
       transition={{ duration: 1 }}
@@ -37,9 +35,9 @@ const Cards = () => {
         ref={firstCardRef}
         variants={fadeInUp}
         initial="hidden"
-        animate={firstCardInView ? "show" : "hidden"}
-        transition={{ duration: 7 }} // 5 seconds transition for the first card
-        className="h-auto max-w-xs p-6 bg-white dark:bg-black rounded-lg shadow-lg lg:max-w-md lg:w-auto"
+        animate={firstCardInView ? 'show' : 'hidden'}
+        transition={{ duration: 5 }}
+        className="h-auto max-w-xs p-6 bg-white rounded-lg shadow-lg lg:max-w-md lg:w-auto"
       >
         <div className="flex items-start space-x-4">
           {/* Avatar */}
@@ -50,9 +48,15 @@ const Cards = () => {
           />
           {/* Content */}
           <div className="flex flex-col">
-            <div className="flex justify-between">
-              <h4 className="font-serif font-bold text-gray-800">Peter Dil</h4>
-              <span className="text-xl text-gray-400 cursor-pointer">×</span>
+            <div className="flex items-center justify-between">
+              <h4 className="font-serif font-bold text-gray-800">Tushar Dushing</h4>
+              
+              {/* Replace Close Button with Image */}
+              <img
+                src="https://framerusercontent.com/images/2gW2mLDTw5NNypH2cM9t0CaeiU.png"
+                alt="Close Button"
+                className="w-6 h-6 cursor-pointer"
+              />
             </div>
             <p className="mt-1 text-gray-700">
               Cheapest <span className="font-serif">alternative to Typeform?</span>
@@ -65,7 +69,7 @@ const Cards = () => {
       <motion.div
         className="flex flex-col items-center justify-center"
         variants={fadeVariants}
-        initial="hidden" // Ensure this starts as hidden too
+        initial="hidden"
         animate={animationState}
         transition={{ duration: 1 }}
       >
@@ -80,9 +84,9 @@ const Cards = () => {
         ref={thirdCardRef}
         variants={fadeInUp}
         initial="hidden"
-        animate={thirdCardInView ? "show" : "hidden"}
-        transition={{ duration: 0.5, delay: 0.4 }} // Slight delay for right card
-        className="max-w-xs p-6 bg-white dark:bg-black rounded-lg shadow-lg lg:max-w-md lg:mt-0"
+        animate={thirdCardInView ? 'show' : 'hidden'}
+        transition={{ duration: 0.5, delay: 0.4 }}
+        className="max-w-xs p-6 bg-white rounded-lg shadow-lg lg:max-w-md lg:mt-0"
       >
         <div className="flex flex-col space-y-4">
           {/* Lead Info */}
@@ -97,8 +101,8 @@ const Cards = () => {
                 <span className="text-xl text-green-500">●</span>
                 <span className="font-serif text-black">New Lead</span>
               </div>
-              <h4 className="font-serif text-gray-800">Peter Dil</h4>
-              <p className="font-serif text-gray-500">@petr_d · 1 minute ago</p>
+              <h4 className="font-serif text-gray-800">Tushar Dushing</h4>
+              <p className="font-serif text-gray-500">@tushuDushing004·    1 minute ago</p>
             </div>
           </div>
           <div className="text-gray-700">
@@ -121,9 +125,9 @@ const Cards = () => {
         ref={secondCardRef}
         variants={fadeInUp}
         initial="hidden"
-        animate={secondCardInView ? "show" : "hidden"}
-        transition={{ duration: 0.5, delay: 0.2 }} // Slight delay for bottom card
-        className="absolute bottom-[-5rem] lg:left-0 max-w-xs p-6 bg-white dark:bg-black rounded-lg shadow-lg lg:max-w-md lg:self-end" 
+        animate={secondCardInView ? 'show' : 'hidden'}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        className="absolute bottom-[-5rem] lg:left-0 max-w-xs p-6 bg-white rounded-lg shadow-lg lg:max-w-md lg:self-end"
       >
         <div className="flex items-start space-x-4">
           {/* Avatar */}
@@ -135,12 +139,15 @@ const Cards = () => {
           {/* Content */}
           <div className="flex flex-col">
             <div className="flex justify-between">
-              <h4 className="font-serif text-gray-800">Elias Stravik</h4>
-              <span className="text-xl text-gray-400 cursor-pointer">×</span>
+              <h4 className="font-serif text-gray-800">Sagar Khemnar</h4>
+              <img
+                src="https://framerusercontent.com/images/2gW2mLDTw5NNypH2cM9t0CaeiU.png"
+                alt="Close Button"
+                className="w-6 h-6 cursor-pointer"
+              />
             </div>
             <p className="mt-1 font-serif text-gray-700">
-              100% of the leads for my <span className="font-bold">$10K / mo</span> agency has come
-              from <span className="font-bold">Twitter/X</span>.
+              100% of the leads for my <span className="font-bold">$10K / mo</span> agency has come from <span className="font-bold">Twitter/X</span>.
             </p>
           </div>
         </div>

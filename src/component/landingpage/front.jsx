@@ -25,14 +25,16 @@ const Front = () => {
     return (
         <div className="flex flex-col items-center justify-center font-sans">
             {/* Header - Removed all padding */}
-            <div className="container flex items-center justify-between w-full px-0 py-0 lg:flex-row">
+            <div className="container flex items-center justify-between w-full px-0 py-5 lg:flex-row">
                 {/* Logo */}
                 <motion.div
                     variants={fadeIn('left', 0.4)}
                     initial="hidden"
-                    whileInView={"show"} className="flex items-center mb-4 space-x-2 lg:mb-0">
-                    <h1 className="font-serif text-3xl text-gray-800">lightscope</h1>
-                    <span className="text-sm font-semibold tracking-wide text-gray-500">BETA</span>
+                    whileInView="show"
+                    className="flex items-center space-x-2"
+                >
+                    <h1 className="text-3xl font-semibold text-gray-800">lightscope</h1>
+                    <span className="text-sm font-medium tracking-wide text-gray-500">BETA</span>
                 </motion.div>
 
                 {/* Menu Icon for Mobile */}
@@ -49,7 +51,7 @@ const Front = () => {
 
                     {/* Dropdown Menu */}
                     {isOpen && (
-                        <div className="absolute right-0 w-48 py-2 mt-2 bg-white dark:bg-black rounded-lg shadow-xl">
+                        <div className="absolute right-0 w-48 py-2 mt-2 bg-white rounded-lg shadow-xl dark:bg-black">
                             <a
                                 href="./"
                                 onClick={handleMenuItemClick}
@@ -93,10 +95,10 @@ const Front = () => {
                     variants={fadeIn('down', 0.1)}
                     initial="hidden"
                     whileInView="show"
-                    className="inline-flex items-center p-2 px-4 mt-12 bg-white dark:bg-black border shadow-md rounded-xl"
+                    className="inline-flex items-center p-2 px-4 mt-12 bg-white border shadow-md dark:bg-black rounded-xl"
                 >
                     {/* Pre-launch badge */}
-                    <span className="inline-flex items-center px-2 py-1 mr-3 font-serif text-sm border border-gray-100 rounded-md">
+                    <span className="inline-flex items-center px-2 py-1 mr-3 text-sm font-medium border border-gray-100 rounded-md">
                         <span className="w-2 h-2 mr-1 rounded-full bg-customPurple100"></span>
                         Pre-launch offer
                     </span>
@@ -118,19 +120,19 @@ const Front = () => {
                 className="my-8 mt-20 text-center"
             >
                 {/* Main heading */}
-                <h1 className="font-serif text-4xl text-gray-800 md:text-6xl">
+                <h1 className="text-4xl font-semibold text-gray-800 md:text-6xl">
                     Find your customers <br /> in seconds with AI
                 </h1>
 
                 {/* Subheading */}
-                <p className="font-serif text-lg text-gray-600 md:text-xl mt-14 ">
+                <p className="text-lg font-medium text-gray-600 md:text-xl mt-14">
                     lightscope scrapes social media and finds leads
                     <span className="font-bold"> ready to buy your product or service</span>
                 </p>
 
                 {/* CTA Button */}
-                <button className="px-8 py-3 mt-6 font-serif text-white transition-all duration-300 transform bg-black rounded-lg hover:bg-gray-900 hover:scale-105">
-                    <Link2 to="/signup" className="">
+                <button className="relative inline-flex items-center justify-center px-8 py-3 mt-6 overflow-hidden font-medium text-white transition-all duration-300 bg-black border-2 border-transparent rounded-lg animate-border-roll">
+                    <Link2 to="/signup" className="relative z-10">
                         Find my customers
                     </Link2>
                     <span className="absolute inset-0 border-2 border-transparent"></span>
@@ -156,9 +158,7 @@ const Front = () => {
                     <div className="pl-2 text-xl text-black-500">
                         <span> ★★★★★</span>
                     </div>
-                    <div className="font-serif text-sm text-gray-700 ">
-                        Trusted by 30+ founders
-                    </div>
+                    <div className="text-sm font-medium text-gray-700">Trusted by 30+ founders</div>
                 </div>
             </div>
         </div>

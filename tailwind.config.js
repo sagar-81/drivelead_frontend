@@ -20,10 +20,10 @@ export default {
       },
       keyframes: {
         'border-roll': {
-          '0%': { borderColor: '#FF0000' },
-          '33%': { borderColor: '#0000FF' },
-          '66%': { borderColor: '#FFFFFF' },
-          '100%': { borderColor: '#FF0000' },
+          '0%': { borderColor: 'red' },
+          '33%': { borderColor: 'blue' },
+          '66%': { borderColor: 'white' },
+          '100%': { borderColor: 'red' },
         },
       },
       animation: {
