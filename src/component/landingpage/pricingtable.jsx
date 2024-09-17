@@ -17,7 +17,7 @@ const PricingTable = () => {
                 {/* Grid for the pricing table */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-16 ">
                     {/* Basic Plan */}
-                    <div className="bg-white shadow-lg rounded-lg p-8 transition-all duration-300 transform hover:scale-110 ">
+                    <div className="bg-white dark:bg-black shadow-lg rounded-lg p-8 transition-all duration-300 transform hover:scale-110 ">
                         <h3 className="text-lg  text-gray-600 transition-colors duration-300">
                             For individuals
                         </h3>
@@ -62,13 +62,13 @@ const PricingTable = () => {
                             <li className=''>✖  Automated follow-up</li>
                         </ul>
 
-                        <button className="mt-8 w-full  bg-white text-black py-3 rounded-lg hover:bg-gray-200 transition">
+                        <button className="mt-8 w-full  bg-white dark:bg-black text-black py-3 rounded-lg hover:bg-gray-200 transition">
                             Get Started
                         </button>
                     </div>
 
                     {/* Scale Plan */}
-                    <div className="bg-white shadow-lg rounded-lg p-8 transition-all duration-300 transform hover:scale-110 ">
+                    <div className="bg-white dark:bg-black shadow-lg rounded-lg p-8 transition-all duration-300 transform hover:scale-110 ">
                         <h3 className="text-lg  text-gray-600">For enterprises</h3>
                         <h2 className="text-3xl  text-black mt-4">Scale</h2>
                         <p className="text-sm text-gray-500  mt-2">For larger scale companies</p>

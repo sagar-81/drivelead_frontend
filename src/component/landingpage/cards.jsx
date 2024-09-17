@@ -39,7 +39,7 @@ const Cards = () => {
         initial="hidden"
         animate={firstCardInView ? "show" : "hidden"}
         transition={{ duration: 7 }} // 5 seconds transition for the first card
-        className="h-auto max-w-xs p-6 bg-white rounded-lg shadow-lg lg:max-w-md lg:w-auto"
+        className="h-auto max-w-xs p-6 bg-white dark:bg-black rounded-lg shadow-lg lg:max-w-md lg:w-auto"
       >
         <div className="flex items-start space-x-4">
           {/* Avatar */}
@@ -82,7 +82,7 @@ const Cards = () => {
         initial="hidden"
         animate={thirdCardInView ? "show" : "hidden"}
         transition={{ duration: 0.5, delay: 0.4 }} // Slight delay for right card
-        className="max-w-xs p-6 bg-white rounded-lg shadow-lg lg:max-w-md lg:mt-0"
+        className="max-w-xs p-6 bg-white dark:bg-black rounded-lg shadow-lg lg:max-w-md lg:mt-0"
       >
         <div className="flex flex-col space-y-4">
           {/* Lead Info */}
@@ -123,7 +123,7 @@ const Cards = () => {
         initial="hidden"
         animate={secondCardInView ? "show" : "hidden"}
         transition={{ duration: 0.5, delay: 0.2 }} // Slight delay for bottom card
-        className="absolute bottom-[-5rem] lg:left-0 max-w-xs p-6 bg-white rounded-lg shadow-lg lg:max-w-md lg:self-end" 
+        className="absolute bottom-[-5rem] lg:left-0 max-w-xs p-6 bg-white dark:bg-black rounded-lg shadow-lg lg:max-w-md lg:self-end" 
       >
         <div className="flex items-start space-x-4">
           {/* Avatar */}
