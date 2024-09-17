@@ -6,7 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 function LoginForm() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const navigate = useNavigate();
+    const navigate = useNavigate(Link);
 
     const handleLogin = async (e) => {
         e.preventDefault();

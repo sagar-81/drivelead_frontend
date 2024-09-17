@@ -105,7 +105,7 @@ function SignUpForm() {
 
                         <div className="relative flex justify-center items-center my-4">
                             <hr className="w-full border-gray-300" />
-                            <span className="absolute bg-white px-4 text-gray-500">or</span>
+                            <span className="absolute bg-white dark:bg-black px-4 text-gray-500">or</span>
                         </div>
                         <div className="mt-6 space-y-2">
                             <button type="button" className="w-full bg-red-500 text-white py-2 rounded hover:bg-red-600 flex justify-center items-center">

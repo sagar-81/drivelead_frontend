@@ -42,7 +42,7 @@ const Faq = () => {
 
     return (
         <div className='min-h-screen'>
-        <div className="max-w-2xl mx-auto p-10 bg-white rounded-lg lg:mt-10 lg:mb-10 shadow-lg " id="faq">
+        <div className="max-w-2xl mx-auto p-10 bg-white dark:bg-black rounded-lg lg:mt-10 lg:mb-10 shadow-lg " id="faq">
             <h2 className="text-3xl  text-center mb-6">FAQ</h2>
             <div className="space-y-4">
                 {faqs.map((faq, index) => (
