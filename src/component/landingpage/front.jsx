@@ -49,7 +49,7 @@ const Front = () => {
 
                     {/* Dropdown Menu */}
                     {isOpen && (
-                        <div className="absolute right-0 w-48 py-2 mt-2 bg-white rounded-lg shadow-xl">
+                        <div className="absolute right-0 w-48 py-2 mt-2 bg-white dark:bg-black rounded-lg shadow-xl">
                             <a
                                 href="./"
                                 onClick={handleMenuItemClick}
@@ -93,7 +93,7 @@ const Front = () => {
                     variants={fadeIn('down', 0.1)}
                     initial="hidden"
                     whileInView="show"
-                    className="inline-flex items-center p-2 px-4 mt-12 bg-white border shadow-md rounded-xl"
+                    className="inline-flex items-center p-2 px-4 mt-12 bg-white dark:bg-black border shadow-md rounded-xl"
                 >
                     {/* Pre-launch badge */}
                     <span className="inline-flex items-center px-2 py-1 mr-3 font-serif text-sm border border-gray-100 rounded-md">
