@@ -30,7 +30,7 @@ const Cards = () => {
       variants={fadeVariants}
       transition={{ duration: 1 }}
     >
-      {/* Left Card (Peter Dil) */}
+      {/* Left Card (Tushar Dushing) */}
       <motion.div
         ref={firstCardRef}
         variants={fadeInUp}
@@ -42,16 +42,15 @@ const Cards = () => {
         <div className="flex items-start space-x-4">
           {/* Avatar */}
           <img
-            src="https://randomuser.me/api/portraits/men/32.jpg"
-            alt="Peter Dil"
+            src="https://media.licdn.com/dms/image/D4D03AQHpuyBsJwvA9A/profile-displayphoto-shrink_400_400/0/1721661521331?e=2147483647&v=beta&t=pjR1FqPD5EXLJnjYKANiUyuYEL83EZpFOz-spPDcP_M"
+            alt="Tushar Dushing"
             className="w-12 h-12 rounded-full"
           />
           {/* Content */}
           <div className="flex flex-col">
             <div className="flex items-center justify-between">
               <h4 className="font-serif font-bold text-gray-800">Tushar Dushing</h4>
-              
-              {/* Replace Close Button with Image */}
+              {/* Close Button */}
               <img
                 src="https://framerusercontent.com/images/2gW2mLDTw5NNypH2cM9t0CaeiU.png"
                 alt="Close Button"
@@ -92,8 +91,8 @@ const Cards = () => {
           {/* Lead Info */}
           <div className="flex items-start space-x-4">
             <img
-              src="https://randomuser.me/api/portraits/men/32.jpg"
-              alt="Peter Dil"
+              src="https://media.licdn.com/dms/image/D4D03AQHpuyBsJwvA9A/profile-displayphoto-shrink_400_400/0/1721661521331?e=2147483647&v=beta&t=pjR1FqPD5EXLJnjYKANiUyuYEL83EZpFOz-spPDcP_M"
+              alt="Tushar Dushing"
               className="w-12 h-12 rounded-full"
             />
             <div className="flex flex-col">
@@ -109,7 +108,7 @@ const Cards = () => {
             <p>
               <span className="font-serif">VP of Product</span> at <span className="font-semibold">CooperFi Inc.</span>
             </p>
-            <p className="font-serif">Email: peterdil@cooperfi.co</p>
+            <p className="font-serif">Email: tushardushing004@gmail.com</p>
             <p className="font-serif">Industry: Consumer Goods</p>
             <p className="font-serif">Location: San Francisco, CA</p>
             <p className="font-serif">Company Size: 500+</p>
@@ -120,7 +119,7 @@ const Cards = () => {
         </div>
       </motion.div>
 
-      {/* Bottom Card (Elias Stravik) */}
+      {/* Bottom Card (Sagar Khemnar) */}
       <motion.div
         ref={secondCardRef}
         variants={fadeInUp}
@@ -132,8 +131,8 @@ const Cards = () => {
         <div className="flex items-start space-x-4">
           {/* Avatar */}
           <img
-            src="https://randomuser.me/api/portraits/men/33.jpg"
-            alt="Elias Stravik"
+            src="https://media.licdn.com/dms/image/v2/D4E03AQGANlnFn3ZR2w/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1696245968643?e=2147483647&v=beta&t=fPsF2WippuSueUx_GKfglxhzaLrw3fEMddTLb8GVO38"
+            alt="Sagar Khemnar"
             className="w-12 h-12 rounded-full"
           />
           {/* Content */}
