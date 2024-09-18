@@ -1,8 +1,7 @@
-import { Link } from 'react-scroll';
-import { Link as Link2 } from 'react-router-dom'
+import { Link as Link2 } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { fadeIn } from '../../variants';
 import { useState } from 'react';
-import { motion } from 'framer-motion'
-import { fadeIn } from '../../variants'
 
 const Front = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -10,6 +9,7 @@ const Front = () => {
     const toggleMenu = () => {
         setIsOpen(!isOpen);
     };
+
     const handleMenuItemClick = () => {
         setIsOpen(false);
     };
@@ -19,26 +19,31 @@ const Front = () => {
         'https://randomuser.me/api/portraits/men/31.jpg',
         'https://randomuser.me/api/portraits/men/30.jpg',
         'https://randomuser.me/api/portraits/men/29.jpg',
-        'https://randomuser.me/api/portraits/men/28.jpg'
+        'https://randomuser.me/api/portraits/men/28.jpg',
     ];
 
     return (
-        <div className="flex flex-col items-center justify-center p-14">
-            {/* NavBar */}
-            <div className="container flex flex-col lg:flex-row lg:justify-between items-center px-6 py-4 w-full">
+        <div className="flex flex-col items-center justify-center font-sans">
+            {/* Header - Removed all padding */}
+            <div className="container flex items-center justify-between w-full px-0 py-5 lg:flex-row">
                 {/* Logo */}
                 <motion.div
                     variants={fadeIn('left', 0.4)}
                     initial="hidden"
-                    whileInView={"show"} className="flex space-x-2 items-center mb-4 lg:mb-0">
-                    <h1 className="text-3xl  text-gray-800">lightscope</h1>
-                    <span className="text-sm font-semibold text-gray-500 tracking-wide">BETA</span>
+                    whileInView="show"
+                    className="flex items-center space-x-2"
+                >
+                    <h1 className="text-3xl font-semibold text-gray-800">lightscope</h1>
+                    <span className="text-sm font-medium tracking-wide text-gray-500">BETA</span>
                 </motion.div>
+
                 {/* Menu Icon for Mobile */}
                 <motion.div
                     variants={fadeIn('right', 0.4)}
                     initial="hidden"
-                    whileInView={"show"} className="relative">
+                    whileInView="show"
+                    className="relative"
+                >
                     <button onClick={toggleMenu} className="text-gray-600 focus:outline-none">
                         Menu
                         <span className="ml-2">&#9776;</span>
@@ -46,96 +51,96 @@ const Front = () => {
 
                     {/* Dropdown Menu */}
                     {isOpen && (
-                        <div className="absolute right-0 mt-2 py-2 w-48 bg-white rounded-lg shadow-xl">
+                        <div className="absolute right-0 w-48 py-2 mt-2 bg-white rounded-lg shadow-xl dark:bg-black">
                             <a
                                 href="./"
                                 onClick={handleMenuItemClick}
-                                className="block px-4 py-2  text-black font-bold hover:bg-gray-100"
+                                className="block px-4 py-2 font-bold text-black hover:bg-gray-100"
                             >
                                 Home
                             </a>
                             <a
                                 href="./"
                                 onClick={handleMenuItemClick}
-                                className="block px-4 py-2 text-black font-bold hover:bg-gray-100"
+                                className="block px-4 py-2 font-bold text-black hover:bg-gray-100"
                             >
                                 How it works
                             </a>
-                            <Link
+                            <Link2
                                 to="pricing"
                                 smooth={true}
                                 duration={500}
                                 onClick={handleMenuItemClick}
-                                className="block px-4 py-2 text-black font-bold hover:bg-gray-100 cursor-pointer"
+                                className="block px-4 py-2 font-bold text-black cursor-pointer hover:bg-gray-100"
                             >
                                 Pricing
-                            </Link>
-                            <Link
+                            </Link2>
+                            <Link2
                                 to="faq"
                                 smooth={true}
                                 duration={500}
                                 onClick={handleMenuItemClick}
-                                className="block px-4 py-2 text-black font-bold hover:bg-gray-100 cursor-pointer"
+                                className="block px-4 py-2 font-bold text-black cursor-pointer hover:bg-gray-100"
                             >
                                 FAQ
-                            </Link>
+                            </Link2>
                         </div>
                     )}
                 </motion.div>
             </div>
 
-
-
             {/* Pre-launch offer banner */}
-            <Link to="pricing"
-                smooth={true}
-                duration={500}>
+            <Link2 to="pricing" smooth={true} duration={500}>
                 <motion.div
                     variants={fadeIn('down', 0.1)}
                     initial="hidden"
-                    whileInView={"show"} className="inline-flex items-center bg-white border rounded-xl shadow-md p-2 px-4 mt-24">
+                    whileInView="show"
+                    className="inline-flex items-center p-2 px-4 mt-12 bg-white border shadow-md dark:bg-black rounded-xl"
+                >
                     {/* Pre-launch badge */}
-                    <span className="inline-flex items-center  text-sm px-2 py-1 rounded-md mr-3 border border-gray-100">
-                        <span className="bg-customPurple100 w-2 h-2 rounded-full mr-1"></span>
+                    <span className="inline-flex items-center px-2 py-1 mr-3 text-sm font-medium border border-gray-100 rounded-md">
+                        <span className="w-2 h-2 mr-1 rounded-full bg-customPurple100"></span>
                         Pre-launch offer
                     </span>
 
                     {/* Text */}
-                    <span className="text-gray-700 text-sm font-medium pr-2">
+                    <span className="pr-2 text-sm font-medium text-gray-700">
                         Limited time 30% discount for the first 50 users
                     </span>
 
-                    <i className="fas fa-angle-right text-sm text-gray-700"></i>
+                    <i className="text-sm text-gray-700 fas fa-angle-right"></i>
                 </motion.div>
-            </Link>
+            </Link2>
 
             {/* Main content */}
             <motion.div
                 variants={fadeIn('up', 0.4)}
                 initial="hidden"
-                whileInView={"show"}
-                className="text-center my-8 mt-20">
+                whileInView="show"
+                className="my-8 mt-20 text-center"
+            >
                 {/* Main heading */}
-                <h1 className="text-4xl md:text-6xl  text-gray-800">
+                <h1 className="text-4xl font-semibold text-gray-800 md:text-6xl">
                     Find your customers <br /> in seconds with AI
                 </h1>
 
                 {/* Subheading */}
-                <p className="text-lg md:text-xl text-gray-600 mt-14  ">
+                <p className="text-lg font-medium text-gray-600 md:text-xl mt-14">
                     lightscope scrapes social media and finds leads
                     <span className="font-bold"> ready to buy your product or service</span>
                 </p>
 
                 {/* CTA Button */}
-                <button className="mt-6 bg-black text-white px-8 py-3 rounded-lg hover:bg-gray-900  transition-all duration-300 transform hover:scale-105">
-                    <Link2 to="/signup" className="">
+                <button className="relative inline-flex items-center justify-center px-8 py-3 mt-6 overflow-hidden font-medium text-white transition-all duration-300 bg-black border-2 border-transparent rounded-lg animate-border-roll">
+                    <Link2 to="/signup" className="relative z-10">
                         Find my customers
                     </Link2>
+                    <span className="absolute inset-0 border-2 border-transparent"></span>
                 </button>
             </motion.div>
 
             {/* Trusted section */}
-            <div className="flex items-center space-x-4 mt-5">
+            <div className="flex items-center mt-5 space-x-4">
                 {/* Avatar group */}
                 <div className="flex">
                     {avatars.map((avatar, index) => (
@@ -149,18 +154,16 @@ const Front = () => {
                 </div>
 
                 {/* Star rating and text */}
-                <div className="items-center space-x-2 ">
-                    <div className="text-black-500 text-xl pl-2">
+                <div className="items-center space-x-2">
+                    <div className="pl-2 text-xl text-black-500">
                         <span> ★★★★★</span>
                     </div>
-                    <div className="text-gray-700  text-sm ">
-                        Trusted by 30+ founders
-                    </div>
+                    <div className="text-sm font-medium text-gray-700">Trusted by 30+ founders</div>
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
-
-export default Front
+export default Front;
+        
