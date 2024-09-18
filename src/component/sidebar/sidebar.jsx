@@ -3,12 +3,15 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';  // Import `u
 import houseIcon from '../../assets/dashboard/home.svg';
 import leadIcon from '../../assets/dashboard/lead.svg';
 import arrowIcon from '../../assets/dashboard/arrow.svg';  // Ensure this path is correct
-import campaigns from '../../assets/dashboard/campaigns.svg';
-import report from '../../assets/dashboard/report.svg';
+import campaigns from '../../assets/dashboard/campaign.svg';
+import report from '../../assets/dashboard/reports.svg';
+import payment from '../../assets/dashboard/payment.svg';
+import findlead from '../../assets/dashboard/findlead.svg';
 import setting from '../../assets/dashboard/setting.svg';
 import help from '../../assets/dashboard/help.svg';
 import logoutIcon from '../../assets/dashboard/logout.svg';  // Ensure this path is correct
 import { CSSTransition } from 'react-transition-group';
+
 
 const Sidebar = () => {
   const [open, setOpen] = useState(true);  // Control for sidebar toggle
@@ -19,9 +22,12 @@ const Sidebar = () => {
 
   const Menus = [
     { title: "Home", src: houseIcon, path: "/dashboard" },
+    { title: "Findlead", src: findlead, path: "/Findlead" },
     { title: "Leads", src: leadIcon, path: "/lead" },
     { title: "Campaigns", src: campaigns, path: "/campaigns" },
     { title: "Reports", src: report, path: "/report" },
+    { title: "Payment", src: payment, path: "/payment" },
+  
   ];
 
   const BottomMenus = [
@@ -38,7 +44,7 @@ const Sidebar = () => {
   return (
     <div className="flex">
       <div
-        className={` ${open ? "w-72" : "w-20"} bg-white dark:bg-black pt-3 relative duration-300 flex flex-col`}
+        className={` ${open ? "w-72" : "w-20"}bg-customGray200 dark:bg-black pt-3 relative duration-300 flex flex-col`}
       >
         {/* Toggle button */}
         <img
