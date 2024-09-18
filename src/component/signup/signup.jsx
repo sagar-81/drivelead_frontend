@@ -53,7 +53,7 @@ function SignUpForm() {
                 }),
             });
 
-            const result = await response.json();
+            // const result = await response.json();
 
             if (response.status === 200) {
                 alert('OTP verified successfully!');

@@ -2,7 +2,7 @@ import Sidebar from '../sidebar/sidebar'
 
 const HelpFeedback = () => {
     return (
-        <div className="relative flex size-full min-h-screen flex-col bg-white dark:bg-black group/design-root overflow-x-hidden" >
+        <div className="relative flex size-full min-h-screen flex-col bg-slate-50 dark:bg-black group/design-root overflow-x-hidden" >
             <div className="layout-container flex h-full grow flex-col">
                 <div className="gap-1 px-6 flex flex-1  py-5">
                     <Sidebar />

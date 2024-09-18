@@ -2,7 +2,7 @@ import Sidebar from '../sidebar/sidebar'
 
 const Payment = () => {
     return (
-        <div className="relative flex flex-col min-h-screen overflow-x-hidden size-full bg-slate-50 group/design-root">
+        <div className="relative flex flex-col min-h-screen overflow-x-hidden size-full  bg-slate-50 group/design-root dark:bg-black">
         <div className="flex flex-col h-full layout-container grow">
           <div className="flex flex-1 gap-1 px-6 py-5">
               <Sidebar/>
@@ -10,7 +10,7 @@ const Payment = () => {
               <div className="flex flex-wrap justify-between gap-3 p-4">
               
                 <div className="flex flex-col gap-3 min-w-72">
-                  <p className="text-[#0e141b] tracking-light text-[32px] font-bold leading-tight">Choose a plan</p>
+                  <p className="text-[#0e141b] tracking-light text-[32px] font-bold leading-tight dark:text-white">Choose a plan</p>
                   <p className="text-[#4e7397] text-sm font-normal leading-normal">All plans come with a 14-day free trial</p>
                 </div>
               </div>
@@ -193,8 +193,8 @@ const Payment = () => {
                   </div>
                 </div>
               </div>
-              <h3 className="text-[#0e141b] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Additional credits</h3>
-              <p className="text-[#0e141b] text-base font-normal leading-normal pb-3 pt-1 px-4">Need more credits? You can purchase additional credits in the billing section.</p>
+              <h3 className="text-[#0e141b] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4 dark:text-white">Additional credits</h3>
+              <p className="text-[#0e141b] text-base font-normal leading-normal pb-3 pt-1 px-4 dark:text-white">Need more credits? You can purchase additional credits in the billing section.</p>
               <div className="flex px-4 py-3">
                 <button
                   className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-5 flex-1 bg-[#1980e6] text-slate-50 text-base font-bold leading-normal tracking-[0.015em]"
@@ -204,7 +204,7 @@ const Payment = () => {
               </div>
             </div>
             <div className="layout-content-container flex flex-col w-[360px]">
-              <h2 className="text-[#0e141b] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">PixelCraft Pro</h2>
+              <h2 className="text-[#0e141b] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5 dark:text-white">PixelCraft Pro</h2>
               <p className="text-[#4e7397] text-sm font-normal leading-normal pb-3 pt-1 px-4">Billed monthly</p>
               <div className="flex items-center justify-between gap-4 px-4 bg-slate-50 min-h-14">
                 <p className="text-[#0e141b] text-base font-normal leading-normal flex-1 truncate">2 PixelCraft design editors</p>

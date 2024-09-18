@@ -1,4 +1,4 @@
-import { useState } from 'react'; 
+import { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';  // Import `useNavigate` for redirection
 import houseIcon from '../../assets/dashboard/home.svg';
 import leadIcon from '../../assets/dashboard/lead.svg';
@@ -14,11 +14,11 @@ import { CSSTransition } from 'react-transition-group';
 
 
 const Sidebar = () => {
-  const [open, setOpen] = useState(true);  // Control for sidebar toggle
-  const [showLogoutModal, setShowLogoutModal] = useState(false); // Control for logout modal
-  
-  const location = useLocation(); // Hook to access location pathname
-  const navigate = useNavigate(); // Hook to programmatically navigate
+  const [open, setOpen] = useState(true); 
+  const [showLogoutModal, setShowLogoutModal] = useState(false);
+
+  const location = useLocation(); 
+  const navigate = useNavigate();
 
   const Menus = [
     { title: "Home", src: houseIcon, path: "/dashboard" },
@@ -27,7 +27,7 @@ const Sidebar = () => {
     { title: "Campaigns", src: campaigns, path: "/campaigns" },
     { title: "Reports", src: report, path: "/report" },
     { title: "Payment", src: payment, path: "/payment" },
-  
+
   ];
 
   const BottomMenus = [
@@ -44,15 +44,15 @@ const Sidebar = () => {
   return (
     <div className="flex">
       <div
-        className={` ${open ? "w-72" : "w-20"}bg-customGray200 dark:bg-black pt-3 relative duration-300 flex flex-col`}
+        className={` ${open ? "w-72" : "w-20" }bg-slate-50 dark:bg-black pt-3 relative duration-300 flex flex-col`}
       >
         {/* Toggle button */}
-        <img
-          src={arrowIcon}  // Use arrowIcon for collapse/expand button
-          className={`absolute cursor-pointer -right-3 top-9 w-7 border-dark-purple border-2 rounded-full ${!open && "rotate-180"}`}
+        {/* <img
+          src={arrowIcon}
+          className={`dark:bg-white absolute cursor-pointer -right-3 top-9 w-7 border-dark-purple border-2 rounded-full ${!open && "rotate-180"}`}
           onClick={() => setOpen(!open)}
-        />
-        
+        /> */}
+
         {/* User info (visible only when sidebar is open) */}
         {open && (
           <div className="flex flex-col px-4 mb-4">
@@ -60,7 +60,7 @@ const Sidebar = () => {
             <p className='text-[#647987] text-sm font-normal leading-normal'>Plan type</p>
           </div>
         )}
-        
+
         {/* Main Menus */}
         <ul className="flex-1 pt-6">
           {Menus.map((menu, index) => (
@@ -114,7 +114,7 @@ const Sidebar = () => {
         {/* Logout Confirmation Modal */}
         <CSSTransition in={showLogoutModal} timeout={300} classNames="fade" unmountOnExit>
           <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-            <div className="p-5 bg-white rounded-lg dark:bg-black">
+            <div className="p-5 bg-slate-50 rounded-lg dark:bg-black">
               <h3 className="text-lg font-medium dark:text-white">Are you sure you want to logout?</h3>
               <div className="flex justify-end mt-4">
                 <button
